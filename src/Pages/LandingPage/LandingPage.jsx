@@ -10,8 +10,8 @@ const LandingPage = () => {
             <img src={landigImg} alt="landing page image" />
             <p className={styles.app__landingpage_p1}>Magnificent things are very simple</p>
             <div className={styles.app__actions}>
-                <Link className={styles.app__actions_login} to={"/login"}>Log In</Link>
-                <Link className={styles.app__actions_register} to={"/register"}>Register</Link>
+                <Link className={styles.app__actions_login} to={"/blog-app/login"}>Log In</Link>
+                <Link className={styles.app__actions_register} to={"/blog-app/register"}>Register</Link>
             </div>
             <p className={styles.app__landingpage_p2}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard </p>
         </div>
