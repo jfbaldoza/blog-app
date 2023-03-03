@@ -1,8 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../LogIn/LogIn.module.css'
 import loginImg from '../LogIn/loginImg.jpg'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 const LogIn = () => {
+
+    const navigate = useNavigate()
+    const [state, setState] = useState({
+        login: {
+            email: '',
+            password: ''
+        }
+    })
+
+        const { login } = state;
+
+        const handleLoginInputs = (e) => {
+            setState({...state, login: {...state.login, [e.target.name]: e.target.value}})
+        }
+
+        const handleLogin = (e) => {
+            e.preventDefault();
+            axios.post('http://localhost:8000/api/login', login, {withCredentials: true})
+            .then((response)=> {
+                console.log(response)
+                navigate("/blog-app/home")
+            })
+            .catch(err => console.log(err))
+            
+        }
+
+
     return (
         <div className={styles.app__login}>
             <div className={styles.app__left}>
@@ -11,14 +40,14 @@ const LogIn = () => {
             </div>
             <div className={styles.app__right}>
                 <h1>Log In</h1>
-                <form className={styles.app__right_form}>
+                <form onSubmit={handleLogin} className={styles.app__right_form}>
                     <div>
                         <label>Email address:</label>
-                        <input type="email" />
+                        <input onChange={handleLoginInputs} type="email" name="email" autoComplete="email"/>
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input type="password" />
+                        <input onChange={handleLoginInputs} type="password" name="password" autoComplete="password"/>
                     </div>
                     <input type="submit" value="Log In" />
                 </form>

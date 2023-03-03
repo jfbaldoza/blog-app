@@ -12,8 +12,3 @@
     padding-left: 2rem;
     padding-right: 2rem;
 }
-.app__home_post {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}

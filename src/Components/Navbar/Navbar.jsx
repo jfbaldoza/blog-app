@@ -11,8 +11,7 @@ const Navbar = () => {
                 <li><Link to={"/blog-app/write"}>Write a blog</Link></li>
             </ul>
             <ul className={styles.app__navbar_right}>
-                <li><Link className={styles.app__navbar_btn1} to={"/blog-app/login"}>Log In</Link></li>
-                <li><Link className={styles.app__navbar_btn2} to={"/blog-app/register"}>Register</Link></li>
+                <li><Link className={styles.app__navbar_btn1} to={"/blog-app/logout"}>Log Out</Link></li>
             </ul>
         </div>
     )

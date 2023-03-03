@@ -1,0 +1,15 @@
+.app_blogpost {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.app_blogpost_container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.app_blogpost_details {
+    display: flex;
+    justify-content: space-between;
+}
