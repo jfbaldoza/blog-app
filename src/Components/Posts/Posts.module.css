@@ -4,30 +4,42 @@
     justify-content: space-evenly;
     align-items: flex-start;
     flex-wrap: wrap;
-    padding: 1rem;
 }
 
 .app__post_container {
     display: flex;
     flex-direction: column;
     width: 25rem;
+    height: 30rem;
     gap: 1rem;
     overflow: hidden;
     background-color: aliceblue;
-    padding: 1rem;
     align-items: center;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    justify-content: flex-start;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .app__post_container img {
-    width: 100%;
-    border-radius: 10px;
+    width: 80%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 7px;
 }
 
 .app__posts_date {
     text-align: center;
 }
 
-.app__posts_details {
-    text-align: justify;
-    text-justify: inter-word;
+.app__post_container p {
+    width: 100%;
+    overflow: hidden;
+}
+
+.app__post_container a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: black;
 }

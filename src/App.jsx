@@ -5,6 +5,7 @@ import BlogPost from './Pages/BlogPost/BlogPost'
 import Home from './Pages/Home/Home'
 import LandingPage from './Pages/LandingPage/LandingPage'
 import LogIn from './Pages/LogIn/LogIn'
+import MakePost from './Pages/MakePost/MakePost'
 import Register from './Pages/Register/Register'
 
 
@@ -21,9 +22,10 @@ function App(props) {
 					<Route path="/blog-app/login" element={<LogIn Authorized={Authorized} setAuthorized={setAuthorized}/>}/>
 					<Route path="/blog-app/register" element={<Register Authorized={Authorized} setAuthorized={setAuthorized}/>}  />
 					<Route path="/blog-app/home" element={<Home/>}  />
-					<Route path='/blog-app/post' element={<BlogPost/>} />
+					<Route path='/blog-app/post/:id' element={<BlogPost/>} />
 					<Route path='/blog-app/logout' element={<Logout/>} />
-                </Routes>
+					<Route path='/blog-app/write' element={<MakePost/>} />
+				</Routes>
 			</BrowserRouter>
 		</>
 	)
