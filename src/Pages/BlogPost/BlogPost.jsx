@@ -1,6 +1,5 @@
 import Navbar from '../../Components/Navbar/Navbar'
 import styles from '../BlogPost/BlogPost.module.css'
-import sampleImg from '../BlogPost/head.png'
 import {Link, useNavigate, useParams} from 'react-router-dom'
 import axios from 'axios';
 import React, {useState, useEffect} from 'react'
